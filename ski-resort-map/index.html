@@ -1,0 +1,79 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-12-11 16:15:16
+ * @LastEditTime: 2020-12-11 16:23:54
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \arcgisAPIStudy_Youtube\ski-resort-map\index.html
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1" />
+  <title>小谢CopyFromGithub的滑雪场</title>
+  <link rel="stylesheet"
+    href="https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.2.5/css/calcite-web.min.css">
+  <link rel="stylesheet" href="https://js.arcgis.com/4.17/esri/css/main.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
+  <script src="./lib/anime.min.js"></script>
+
+  <script>
+    var locationPath = location.origin + location.pathname.replace(/\/[^\/]+$/, "");
+    window.dojoConfig = {
+      packages: [
+        {
+          name: "lib",
+          location: locationPath + "/lib"
+        },
+        {
+          name: "app",
+          location: locationPath + "/app"
+        }
+      ]
+    };
+  </script>
+  <script src="https://js.arcgis.com/4.17/"></script>
+  <script>
+    require([
+      'app/main'
+    ], function (main) {
+      main.init();
+    });
+  </script>
+</head>
+
+<body>
+
+  <div id="viewDiv">
+  </div>
+  <div id="loader"><img src="./img/loader-skier.gif" alt="loading icon"><br>Loading map...</div>
+  <div class="snow">
+    <div class="i-large"></div>
+    <div class="i-medium"></div>
+    <div class="i-small"></div>
+  </div>
+  <div id="menu" class="esri-widget">
+    <h3>小谢CopyFromGithub的滑雪场</h3>
+    <p>This is an interactive map of the Mammoth ski resort, built for demo
+      purposes only. Some fun things you could do: <button id="flyPlane">fly the plane</button> or
+      <button id="startSnow">make it snow</button>. Ski slopes are colored based on their difficulty:
+      <span class="legend-label" style="color:rgb(141, 199, 97)">easiest</span>, <span class="legend-label" style="color:rgb(52, 134, 209)">easy</span>,
+      <span class="legend-label" style="color:rgb(100, 100, 100)">difficult</span>, <span class="legend-label" style="color:rgb(235, 64, 52)">very difficult</span>,
+      <span class="legend-label" style="color:rgb(255, 143, 46)">adventure parks</span>.
+      Some ski lifts are open: <span class="esri-icon-grant" style="color:rgb(54, 173, 136)"></span> and some are
+      closed: <span class="esri-icon-deny" style="color:rgb(230, 87, 97)"></span>.
+    </p>
+    <!-- <p class="credits">Application built with <a href="https://developers.arcgis.com/javascript">ArcGIS for JavaScript</a>.
+      Credits to <a href="https://www.esri.com/arcgis-blog/author/pmielke/">Philip Mielke</a> for the trees, ski trail and
+      ski lifts data. Inspired by <a href="https://app.matterhornparadise.ch/en/">Skiguide Zermatt</a> and the
+      <a href="https://www.mammothmountain.com/winter/mountain-information/lifts-trails/trail-map">official Mammoth ski resort map</a>.
+      3D models from Google Poly: <a href="https://poly.google.com/view/6ufSK2nQBc6">Chalet</a> and
+      <a href="https://poly.google.com/view/7cvx6ex-xfL">Small airplane</a>. -->
+    </p>
+  </div>
+</body>
+
+</html>

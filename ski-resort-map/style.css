@@ -1,0 +1,102 @@
+html,
+body,
+#viewDiv {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(0deg, #f9f9f9 25%, #e2faff 75%);
+  font-family: "Avenir Next W00","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+#menu {
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  right: 0;
+  padding: 0.5em 0.5em 0 0.5em;
+  background-color: rgba(255, 255, 255, 0.65);
+}
+
+button {
+  font-family: "Avenir Next W00","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 1em;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgb(100, 100, 100);
+  padding: 0;
+}
+
+button:hover {
+  background: rgb(100, 100, 100);
+  color: white;
+  cursor: pointer;
+}
+
+.credits {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+.legend-label {
+  font-weight: bold;
+}
+
+canvas {
+  filter: opacity(0);
+  transition: filter 1s;
+}
+
+.snow {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+#loader {
+  position: absolute;
+  top: 50%;
+  margin-top: -100px;
+  text-align: center;
+  width: 100%;
+}
+
+#loader>img {
+  height: 70px;
+  filter: drop-shadow(1px 1px 2px rgba(100, 100, 100, 0.6));
+}
+
+.i-large,
+.i-medium,
+.i-small {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.i-large {
+  background: url("./img/snow_large.png") repeat 0px 0px;
+  animation: dropSnowFlakes 2s linear infinite;
+}
+.i-medium {
+  background: url("./img/snow_medium.png") repeat 0px 0px;
+  animation: dropSnowFlakes 12s linear infinite;
+}
+.i-small {
+  background: url("./img/snow_small.png") repeat 0px 0px;
+  animation: dropSnowFlakes 27s linear infinite;
+}
+
+@keyframes dropSnowFlakes {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 413px;
+  }
+}
