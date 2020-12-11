@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-12-10 10:22:13
+ * @LastEditTime: 2020-12-10 18:11:10
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \arcgisAPIStudy_Youtube\DevSummit-presentations-gh-pages\Dev-Summit-2020\Getting-started-web-dev\Demos\Step7_Widgets\js\main.js
+ */
 require([
   "esri/WebMap",
   "esri/views/MapView",
@@ -44,8 +52,8 @@ require([
 
     const swipe = new Swipe({
       view: view,
-      leadingLayers: [chicagoCrime],
-      trailingLayers: [homicides],
+      leadingLayers: [chicagoCrime], // left
+      trailingLayers: [homicides], // right
       position: 45
     });
 
