@@ -99,7 +99,8 @@ define([
             },
             spatialReference: SpatialReference.WebMercator
           });
-          return mesh;
+          
+          return [mesh, [delaunay,verticesZ]];
         })
         .catch(console.error);
     }
